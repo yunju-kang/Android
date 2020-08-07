@@ -10,7 +10,7 @@
 
 ###### [		- if문](#-if문)
 
-##### [		- switch()~case문](#-switchcase문)
+##### [		- switch()~case문](#--switchcase문)
 
 #### [3. 배열](#배열)
 

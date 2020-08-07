@@ -8,7 +8,7 @@
 
 #### [2. 조건문: if문, switch()~case문](#조건문-if문-switchcase문)
 
-###### [		- if문](#--if문)
+###### [		- if문](#---if문)
 
 ##### [		- switch()~case문](#---switchcase문)
 
@@ -99,7 +99,7 @@ true
 
 ### 조건문: if문, switch()~case문
 
-#### - if문
+#### -  if문
 
 : 조건이 true인지 false인지에 따라서 어떤 작업을 수행할지 결정됨
 

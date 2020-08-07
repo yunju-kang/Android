@@ -1,8 +1,20 @@
 # Java 기본 문법
 
-[배열](#배열)
 
- 
+
+### 목차
+
+#### [1. 변수와 데이터 형식](#변수와-데이터-형식)
+
+#### [2. 조건문: if문, switch()~case문](#조건문:-if문,-switch()~case문)
+
+#### [3. 배열](#배열)
+
+#### [4. 반복문: for문, while문](#반복문:-for문,-while문)
+
+
+
+# 
 
 ### 변수와 데이터 형식
 
@@ -61,7 +73,7 @@ true
 
 
 
-# 
+#   
 
 ### 조건문: if문, switch()~case문
 
@@ -71,7 +83,7 @@ true
 
 | if 문 구조                                                   |
 | :----------------------------------------------------------- |
-| if(조건식) {<br/>	조건식이 true일 때 이 부분 실행<br/>} else {<br/>	조건식이 false일 때 이 부분 실행<br/>} |
+| if(조건식) {<br/> 	조건식이 true일 때 이 부분 실행<br/>} else {<br/>	조건식이 false일 때 이 부분 실행<br/>} |
 
 <코드 예시>
 
@@ -117,7 +129,7 @@ public class exam01 {
 
 | switch()~case문 구조                                         |
 | ------------------------------------------------------------ |
-| switch(값) {<br/><br/>case 값1 :<br/>	값1이면 이 부분 실행<br/>	break;<br/><br/>case 값2 :<br/>	값2이면 이 부분 실행<br/>	break;<br/><br/>default :<br/>	아무것도 해당하지 않으면 이 부분 실행<br/>	break;<br/>	<br/>} |
+| switch(값) {<br/>  <br/>case 값1 :<br/>	값1이면 이 부분 실행<br/>	break;<br/><br/>case 값2 :<br/>	값2이면 이 부분 실행<br/>	break;<br/><br/>default :<br/>	아무것도 해당하지 않으면 이 부분 실행<br/>	break;<br/>	<br/>} |
 
 <코드예시>
 
@@ -150,7 +162,9 @@ public class exam01 {
 		case 'd':
 			System.out.println("4등급입니다.");
 			break;					
-		
+        default:
+            System.out.println("기준 외 등급입니다.")
+                
 		}
 	}
 }
@@ -162,9 +176,10 @@ public class exam01 {
 3등급입니다.
 ```
 
+### 
 
+#   
 
-# 
 ### 배열
 
 - 여러 개의 변수를 나란히 나열한 것
@@ -333,7 +348,6 @@ public class exam01 {
  엄마 : 50세 
  아들 : 25세
 ```
-
 
 
 

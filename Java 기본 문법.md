@@ -6,15 +6,23 @@
 
 #### [1. 변수와 데이터 형식](#변수와-데이터-형식)
 
-#### [2. 조건문: if문, switch()~case문](#조건문-if문-switchcase문)
+#### [2. 조건문: if문, switch()~case문](#조건문:-if문,-switch()~case문)
 
 #### [3. 배열](#배열)
 
-#### [4. 반복문: for문, while문](#반복문-for문-while문)
+#### [4. 반복문: for문, while문](#반복문:-for문,-while문)
+
+#### [5. 메소드와 전역변수, 지역변수](#메소드와-전역변수-지역변수)
+
+#### [6.예외처리: try~catch](#예외처리-trycatch)
+
+
 
 
 
 # 
+
+
 
 ### 변수와 데이터 형식
 
@@ -73,7 +81,13 @@ true
 
 
 
+
+
+
+
 #   
+
+
 
 ### 조건문: if문, switch()~case문
 
@@ -123,7 +137,11 @@ public class exam01 {
 
 
 
-#### - switch()~case문
+
+
+
+
+#### -  switch()~case문
 
 : 여러가지 경우에 따라 어떤 작업을 수행할지 결정됨
 
@@ -178,7 +196,13 @@ public class exam01 {
 
 ### 
 
+
+
+
+
 #   
+
+
 
 ### 배열
 
@@ -222,7 +246,13 @@ public class exam01 {
 
 ### 
 
+
+
+
+
 #   
+
+
 
 ### 반복문: for문, while문
 
@@ -304,6 +334,10 @@ public class exam01 {
 
 
 
+
+
+
+
 - #### while문
 
 | while문 형식                                                 |
@@ -351,3 +385,141 @@ public class exam01 {
 
 
 
+
+
+
+
+# 
+
+
+
+### 메소드와 전역변수, 지역변수
+
+- 메소드 : 기본 main() 메소드 외에 사용자가 메소드를 추가 생성할 수 있음
+- 전역변수(global variable) : 클래스에서 선언된 변수. 모든 메소드에서 사용 가능.
+- 지역변수(local variable) : 메소드 내부에서 선언된 변수. 해당 메소드에서만 사용 가능.
+
+
+
+<코드 예제>
+
+수학, 언어, 컴퓨터 점수의 평균을 구하고, 보충학습 필요 유무 결과를 출력.
+
+보충학습 기준 점수는 전역변수로 지정.
+
+수학, 언어, 컴퓨터 점수는 지역변수로 지정.
+
+```java
+public class exam01 {
+	
+    //기준 점수를 전역변수로 선언
+	static int standard = 75;
+	
+    
+	public static void main(String args[]) {
+		
+        // 수학 점수, 언어 점수, 컴퓨터 점수, 평균 점수를 지역변수로 선언
+		int math = 90;
+		int language = 60;
+		int computer = 70;
+		int average = ( math + language + computer)/3;
+		
+        
+        //결과값 출력
+		System.out.printf("[기준점수 : %d점 |평균점수 : %d점]\n", standard, average);
+		System.out.println(returnResult(standard, average));
+		
+	}
+	
+	
+    //보충학습 필요 유무 리턴 메소드
+	static String returnResult(int stan, int aver) {
+		
+        // 평균이 기준 점수 미만이면
+		if(aver < stan) {
+			return "보충학습 필요";
+		} 
+        // 평균이 기준 점수 이상이면
+        else {
+			return "보충학습 불필요";
+		}	
+	}	
+}
+```
+
+<결과값>
+
+```
+[기준점수 : 75점 |평균점수 : 73점]
+보충학습 필요
+```
+
+
+
+
+
+
+
+# 
+
+
+
+### 예외처리: try~catch문
+
+: Java 프로그램 실행 중에 발생하는 오류를 처리
+
+
+
+<try~catch  미실행 시>
+
+```java
+public class exam01 {
+	
+	public static void main(String args[]) {
+		
+		//변수 선언
+		int num1 = 100, num2 = 0;
+		
+        // num1/num2 값 출력
+		System.out.println(num1/num2);	
+	}	
+}
+```
+
+```java
+Exception in thread "main" java.lang.ArithmeticException: / by zero
+	at exam01.main(exam01.java:8)
+```
+
+=> 오류 발생(ArithmeticException)
+
+
+
+<try~catch문 실행 시>
+
+```java
+public class exam01 {
+	
+	public static void main(String args[]) {
+		
+        // 변수 선언
+        int num1 = 100, num2 = 0;
+		
+		// num1/num2실행
+		try {
+			System.out.println(num1/num2);
+		}
+        // try문 오류 발생시 실행
+		catch(java.lang.ArithmeticException e) {
+			System.out.println("calculation error");
+		}
+		
+	}	
+}
+```
+
+```
+calculation error
+```
+
+=> try문이 실행됨

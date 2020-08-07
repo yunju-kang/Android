@@ -8,9 +8,9 @@
 
 #### [2. 조건문: if문, switch()~case문](#조건문-if문-switchcase문)
 
-###### [		- if문](#-if문)
+###### [		- if문](#--if문)
 
-##### [		- switch()~case문](#--switchcase문)
+##### [		- switch()~case문](#---switchcase문)
 
 #### [3. 배열](#배열)
 

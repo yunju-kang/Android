@@ -3,45 +3,70 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="#BF8E63"
+    android:layout_height="match_parent"
+    android:background="#99B8BF"
     android:orientation="vertical"
+    android:padding="30dp"
     tools:context=".MainActivity"
     tools:ignore="ExtraText">
+
+
+    <SearchView
+        android:inputType="text"
+        android:layout_margin="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+ <!--   <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="What is this string?"
+        android:textface = "sans"
+        />
+-->
 
     <Button
         android:id="@+id/button1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#BF8E63"
-        android:text="@string/strBtn1">
+        android:layout_height="47dp"
+        android:layout_marginTop="20dp"
+        android:background="#7E77A6"
+        android:text="@string/strBtn1"
+        android:textColor="#260101"
+        android:typeface="monospace"
+        android:textStyle="bold"
+        />
 
 
-    </Button>
 
     <Button
         android:id="@+id/button2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:background="#D9AC84"
-        android:text="@string/strBtn2" />
+        android:background="#DCEEF2"
+        android:text="@string/strBtn2"
+        android:textColor="#260101"
+        android:typeface="normal"
+        android:textStyle="italic"/>
 
     <Button
         android:id="@+id/button3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#D9B9A7"
-        android:text="@string/strBtn3" />
+        android:background="#688C1B"
+        android:text="@string/strBtn3"
+        android:textColor="#260101"
+        android:typeface="sans"/>
 
     <Button
         android:id="@+id/button4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#BF6060"
-        android:text="@string/strBtn4" /><![CDATA[
+        android:background="#260101"
+        android:text="@string/strBtn4"
+        android:textColor="#DCEEF2"
+        android:typeface="serif"/>
 
-    >
 
-]]>
 </LinearLayout>

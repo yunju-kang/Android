@@ -31,5 +31,6 @@
   <application
   	android:icon="@mipmap/ic_example"
   	android:roundIcon="@mipmap/ic_example_round"
+    
   ```
 

@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Calculation</string>
+    <string name="str1">계산 결과: </string>
+</resources>

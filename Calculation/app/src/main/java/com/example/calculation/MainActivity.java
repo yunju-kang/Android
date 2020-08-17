@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -15,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
     Button btnAdd, btnSub, btnMul, btnDiv;
     TextView textResult;
     String num1, num2;
-    Integer result;
+    Float result;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,8 +24,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
+
+
         //제목 설정
         setTitle("사칙연산 계산기");
+
+
 
 
         //변수 대입
@@ -36,52 +41,120 @@ public class MainActivity extends AppCompatActivity {
         btnDiv = (Button)findViewById(R.id.btnDiv);
         textResult = (TextView)findViewById(R.id.textResult);
 
+
+
+
+
         //버튼 이벤트
+
+
+
             //더하기 버튼 이벤트
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                //입력된 값을 문자열로 가져오기
                 num1 = number1.getText().toString();
                 num2 = number2.getText().toString();
 
-                result = Integer.parseInt(num1) + Integer.parseInt(num2);
-                textResult.setText("계산 결과: " + result);
+                // 빈칸 존재 시
+                if(num1.isEmpty() || num2.isEmpty()){
+                    Toast.makeText(getApplicationContext(), "빈칸이 있습니다", Toast.LENGTH_SHORT).show();
+                }
+
+                //더하기 실행
+                else {
+                    result = Float.parseFloat(num1) + Float.parseFloat(num2);
+                    textResult.setText("계산 결과: " + result.toString());
+                }
+
             }
         });
+
+
+
             //빼기 버튼 이벤트
         btnSub.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                //입력된 값을 문자열로 가져오기
                 num1 = number1.getText().toString();
                 num2 = number2.getText().toString();
 
-                result = Integer.parseInt(num1) - Integer.parseInt(num2);
-                textResult.setText("계산 결과: " + result);
+                // 빈칸 존재 시
+                if(num1.isEmpty() || num2.isEmpty()){
+                    Toast.makeText(getApplicationContext(), "빈칸이 있습니다", Toast.LENGTH_SHORT).show();
+                }
+
+                //빼기 실행
+                else {
+                    result = Float.parseFloat(num1) - Float.parseFloat(num2);
+                    textResult.setText("계산 결과: " + result.toString());
+                }
             }
         });
+
+
+
 
             //곱하기 버튼 이벤트
         btnMul.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                //입력된 값을 문자열로 가져오기
                 num1 = number1.getText().toString();
                 num2 = number2.getText().toString();
 
-                result = Integer.parseInt(num1) * Integer.parseInt(num2);
-                textResult.setText("계산 결과: " + result);
+                // 빈칸 존재 시
+                if(num1.isEmpty() || num2.isEmpty()){
+                    Toast.makeText(getApplicationContext(), "빈칸이 있습니다", Toast.LENGTH_SHORT).show();
+                }
+
+                //곱하기 실행
+                else {
+                    result = Float.parseFloat(num1) * Float.parseFloat(num2);
+                    textResult.setText("계산 결과: " + result.toString());
+                }
+
             }
         });
+
+
 
             //나누기 버튼 이벤트
         btnDiv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                //입력된 값을 문자열로 가져오기
                 num1 = number1.getText().toString();
                 num2 = number2.getText().toString();
 
-                result = Integer.parseInt(num1) / Integer.parseInt(num2);
-                textResult.setText("계산 결과: " + result);
-            }
-        });
+                // 빈칸 존재 시
+                if(num1.isEmpty() || num2.isEmpty()){
+                    Toast.makeText(getApplicationContext(), "빈칸이 있습니다", Toast.LENGTH_SHORT).show();
+                }
+
+                else {
+
+                    //0으로 나누는 경우 오류문 출력
+                    if (Float.parseFloat(num2) == 0) {
+                        Toast.makeText(getApplicationContext(), "0으로 나눌 수 없습니다", Toast.LENGTH_SHORT).show();
+                    }
+                    //나누기 실행
+                    else {
+                        result = Float.parseFloat(num1) / Float.parseFloat(num2);
+                        textResult.setText("계산 결과: " + result.toString());
+                    }
+                }
+
+               }
+            });
+        }
     }
-}
+
+
+

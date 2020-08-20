@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/telText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="전화번호"
+        android:textSize="28dp"
+        android:layout_toLeftOf="@+id/telEdit"
+        android:layout_alignBaseline="@+id/telEdit"/>
+
+    <EditText
+        android:id="@+id/telEdit"
+        android:layout_width="290dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text=" 000-0000-0000"
+        android:textSize="28dp" />
+
+    <Button
+        android:id="@+id/enter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/cancel"
+        android:layout_alignBaseline="@+id/cancel"
+        android:text="입력"
+        android:textSize="28dp"
+        android:background="#C5D930"
+        android:layout_marginRight="10dp"/>
+
+    <Button
+        android:id="@+id/cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/telEdit"
+        android:layout_alignRight="@+id/telEdit"
+        android:text="취소"
+        android:textSize="28dp"
+        android:background="#C5D930"/>
+</RelativeLayout>
